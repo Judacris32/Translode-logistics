@@ -1,0 +1,147 @@
+@import "@fontsource-variable/plus-jakarta-sans/wght.css";
+@import "leaflet/dist/leaflet.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-mist text-ink antialiased;
+    font-family: "Plus Jakarta Sans Variable", "Plus Jakarta Sans", system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  ::selection {
+    background: #fdb515;
+    color: #0b1530;
+  }
+
+  :focus-visible {
+    outline: 3px solid #fdb515;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  .page {
+    @apply mx-auto w-full max-w-page px-5 sm:px-8;
+  }
+
+  .h-display {
+    @apply font-extrabold tracking-[-0.03em];
+    line-height: 1.04;
+  }
+
+  .h-section {
+    @apply text-3xl font-extrabold tracking-[-0.025em] sm:text-[2.5rem];
+    line-height: 1.12;
+  }
+
+  .h-card {
+    @apply text-xl font-bold tracking-[-0.015em];
+    line-height: 1.25;
+  }
+
+  .eyebrow {
+    @apply text-[0.8125rem] font-bold uppercase tracking-[0.14em] text-amber-700;
+  }
+
+  .eyebrow-light {
+    @apply text-[0.8125rem] font-bold uppercase tracking-[0.14em] text-amber;
+  }
+
+  /* Waybill numbers and money: fixed-width figures so columns line up. */
+  .num {
+    font-variant-numeric: tabular-nums;
+    @apply font-bold tracking-[0.005em];
+  }
+
+  .label {
+    @apply text-[0.8125rem] font-semibold text-slate;
+  }
+
+  .card {
+    @apply rounded-2xl border border-line bg-white shadow-card;
+  }
+
+  .btn {
+    @apply inline-flex min-h-[3rem] items-center justify-center gap-2 rounded-xl px-5 text-[0.95rem] font-bold transition-all duration-200;
+  }
+
+  .btn-amber {
+    @apply bg-amber text-ink shadow-amber hover:-translate-y-0.5 hover:bg-[#ffc233];
+  }
+
+  .btn-brand {
+    @apply bg-brand-700 text-white hover:-translate-y-0.5 hover:bg-brand-600;
+  }
+
+  .btn-ghost {
+    @apply border border-line bg-white text-ink hover:border-brand-200 hover:bg-brand-50;
+  }
+
+  .btn-outline-light {
+    @apply rounded-full border border-white/45 text-white hover:border-white hover:bg-white/10;
+  }
+
+  .input {
+    @apply block min-h-[3rem] w-full rounded-xl border border-line bg-white px-4 text-base text-ink transition-shadow placeholder:text-slate/60;
+  }
+
+  .input:focus-visible {
+    outline: none;
+    @apply border-brand-500;
+    box-shadow: 0 0 0 4px rgba(47, 95, 227, 0.16);
+  }
+
+  .icon-tile {
+    @apply inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-50 text-brand-700;
+  }
+
+  .text-link {
+    @apply font-semibold text-brand-700 underline decoration-brand-200 decoration-2 underline-offset-4 transition-colors hover:decoration-brand-700;
+  }
+}
+
+/* Map pins drawn in CSS, so no image files are needed. */
+.map-pin {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 6px rgba(10, 22, 51, 0.4);
+  background: #14349a;
+}
+.map-pin--end {
+  background: #fdb515;
+}
+.map-pin--stop {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-color: #14349a;
+}
+.leaflet-container {
+  font-family: inherit;
+  border-radius: 1rem;
+  background: #e4ebfc;
+}

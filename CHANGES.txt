@@ -1,0 +1,56 @@
+Translode Logistics: changes in this delivery
+Extract over your existing translode-logistics folder, then run: npm install
+
+NEW FILES
+  + app/contact/actions.ts
+  + app/icon.svg
+  + app/robots.ts
+  + app/sitemap.ts
+  + components/ContactForm.tsx
+  + components/ServiceIcon.tsx
+  + components/WhatsAppButton.tsx
+  + lib/contact.ts
+  + public/images/air-freight.jpg
+  + public/images/courier.jpg
+  + public/images/global.jpg
+  + public/images/haulage.jpg
+  + public/images/hero-about.jpg
+  + public/images/hero-contact.jpg
+  + public/images/hero-home.jpg
+  + public/images/hero-quote.jpg
+  + public/images/hero-services.jpg
+  + public/images/hero-track.jpg
+  + public/images/manager.jpg
+  + public/images/og.jpg
+  + public/images/packing.jpg
+  + public/images/sea-freight.jpg
+  + public/images/sorting.jpg
+  + public/images/team.jpg
+  + public/images/tracking.jpg
+  + public/images/warehousing.jpg
+  + supabase/migrations/0002_contact_messages.sql
+
+CHANGED FILES
+  ~ IMAGES.md
+  ~ README.md
+  ~ app/about/page.tsx
+  ~ app/contact/page.tsx
+  ~ app/layout.tsx
+  ~ app/not-found.tsx
+  ~ app/page.tsx
+  ~ app/quote/page.tsx
+  ~ app/services/page.tsx
+  ~ app/track/page.tsx
+  ~ components/PageHero.tsx
+  ~ components/Photo.tsx
+  ~ components/SiteFooter.tsx
+  ~ components/TrackingPreview.tsx
+  ~ lib/services.ts
+  ~ package-lock.json
+  ~ package.json
+
+DELETE THESE (no longer used)
+  - public/images/.gitkeep
+
+DATABASE
+  Run supabase/migrations/0002_contact_messages.sql in the Supabase SQL Editor.
